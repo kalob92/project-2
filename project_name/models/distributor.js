@@ -1,5 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Distributor = sequelize.define("Distributor", {
+      distributor_id: PRIMARY_KEY,
       product_id: {
         type: DataTypes.INTEGER,
         allowNull: false,

@@ -1,5 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Product = sequelize.define("Product", {
+    product_id: PRIMARY_KEY,
     product_name: {
       type: DataTypes.STRING,
       allowNull: false,
