@@ -7,8 +7,10 @@ var productController = require('../controllers/productcontroller');
 
 
 router.get("/", function(req,res) {
-	res.render("login");
-})
+	res.render('login', {
+		loggedIn: false
+	});
+});
 // Get request to get all products
 router.get('/distributor', productController.list);
 
