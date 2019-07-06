@@ -11595,6 +11595,23 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 
+#deleteBtn {
+  background-color: #7659EF;
+  border-color: transparent;
+  color: #fff;
+  margin: 2px;
+}
+
+#editBtn {
+  background-color: red;
+  border-color: transparent;
+  color: #fff;
+}
+
+#products-table {
+  margin: 30px;
+}
+
 #username-input {
   width: 500px;
   -webkit-box-shadow: inset;
