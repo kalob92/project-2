@@ -14,13 +14,14 @@
 </head>
 
 <body>
+	{{!-- this navbar will only show up when the user is logged in --}}
 	<div class="conditional-navbar">
 		{{#if loggedIn}}
 		<nav class="navbar navbar-default navbar-light" style="background-color: rgb(13, 43, 63);">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#">
-						<img src="https://fontawesome.com/icons/eye?style=regular" height="20" alt="logo">
+						<img src="./img/vision.png" id="eye">
 					</a>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
 						data-target="#navbar-collapse" aria-expanded="false">
@@ -45,6 +46,9 @@
 		</nav>
 		{{/if}}
 	</div>
+	{{!-- /div that holds conditional navbar --}}
+
+
 	{{{ body }}}
 </body>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>

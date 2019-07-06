@@ -12,10 +12,20 @@ router.get("/", function(req,res) {
 	});
 });
 // Get request to get all products
-router.get('/distributor', productController.list);
+router.get('/distributor', function(req, res) {
+	res.render('list', {
+		loggedIn: true
+	}),
+	productController.list
+});
 
 // GET request for insert a new product
-router.get('/create', productController.create);
+router.get('/create', function(req, res) {
+	res.render('create', {
+		loggedIn: true
+	}),
+	productController.create
+});
 
 // GET request for chat section
 router.get('/chat', function(req, res) {
