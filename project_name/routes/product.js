@@ -5,12 +5,18 @@ const request = require('request');
 // Require controller modules
 var productController = require('../controllers/productcontroller');
 
-
+// home/login page
 router.get("/", function(req,res) {
 	res.render('login', {
 		loggedIn: false
 	});
 });
+
+// forgot password?
+router.get('/forgot', function(req, res) {
+	res.render('forgot')
+});
+
 // Get request to get all products
 router.get('/distributor', function(req, res) {
 	res.render('list', {
