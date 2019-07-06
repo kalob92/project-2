@@ -37,7 +37,9 @@ router.get('/chat', function(req, res) {
 	
 	// GET request for about section
 router.get('/about', function(req, res) {
-	res.render('about');
+	res.render('about', {
+		loggedIn: true
+	});
   });
 
 // GET request for edit one product
@@ -57,14 +59,13 @@ router.get('/api/:id', function(req, response, next){
 	var movie = req.params.id;
 
 	request('https://www.omdbapi.com/?t=' + movie + '&y=&plot=short&apikey=trilogy',{JSON: true},(err, res, body) => {
-			if (err) { 
-				return console.log(err);
-			}
-			console.log(body)
-			var movieObj = body;
-			response.locals.movieObj = movieObj
-			next();
-
+		if (err) { 
+			return console.log(err);
+		}
+		console.log(body)
+		var movieObj = body;
+		response.locals.movieObj = movieObj
+		next();
 	});
 
 }, function(req, res, next){
