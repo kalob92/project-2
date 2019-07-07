@@ -1,4 +1,15 @@
 #products-table {
   margin: 30px;
 }
+
+#add-product {
+  background-color: blue;
+  border-color: transparent;
+  color: #fff;
+}
+
+#products-available-text {
+  text-align: center;
+  font-size: 50px;
+}
 /*# sourceMappingURL=list.css.map */

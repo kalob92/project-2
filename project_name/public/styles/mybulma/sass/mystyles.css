@@ -11612,6 +11612,29 @@ label.panel-block:hover {
   margin: 30px;
 }
 
+#add-product {
+  background-color: blue;
+  border-color: transparent;
+  color: #fff;
+}
+
+#products-available-text {
+  text-align: center;
+  font-size: 50px;
+}
+
+#product-form {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#submitBtn {
+  background-color: #7659EF;
+  border-color: transparent;
+  color: #fff;
+}
+
 #username-input {
   width: 500px;
   -webkit-box-shadow: inset;

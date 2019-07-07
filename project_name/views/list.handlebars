@@ -1,35 +1,31 @@
-
+<h1 id="products-available-text">Products Available</h1>
 
 <div id="products-table">
-<table class="table">
-	<thead>
-		<tr>
-			<th><abbr title="Position">Product</abbr></th>
-			<th>Type</th>
-			<th><abbr title="Price">Price</abbr></th>
-			<th><abbr title="Stock">Stock</abbr></th>
-			<th><abbr title="Description">Desctiption</abbr></th>
-			<th><abbr title="Action">Action</abbr></th>
-		</tr>
-	</thead>
+	<table class="table">
+		<thead>
+			<tr>
+				<th><abbr title="Position">Product</abbr></th>
+				<th>Type</th>
+				<th><abbr title="Price">Price</abbr></th>
+				<th><abbr title="Stock">Stock</abbr></th>
+				<th><abbr title="Description">Description</abbr></th>
+				<th><abbr title="Action">Action</abbr></th>
+			</tr>
+		</thead>
 
-	<tbody>
-		{{#each products}}
-		<tr id="{{this.id}}">
-			<td>{{this.name}}</td>
-			<td>{{this.department}}</td>
-			<td>{{ formatPrice this.price}}</td>
-			<td>{{this.stock}}</td>
-			<td>
-				{{!-- Should pull from the database a description of the product --}}
-				{{this.Description}}<p>Description</p>
-			</td>
-			<td><button id="deleteBtn">Delete</button><button id="editBtn">Edit</button></td>
-		</tr>
-		{{/each}}
-		{{!-- ============ --}}
-
-	</tbody>
-</table>
+		<tbody>
+			{{#each products}}
+			<tr>
+				<td>{{this.name}}</td>
+				<td>{{this.department}}</td>
+				<td>{{this.price}}</td>
+				<td>{{this.stock}}</td>
+				<td>{{this.description}}</td>
+				<td><button class="button" id="deleteBtn">Delete</button><button class="button"id="editBtn">Edit</button></td>
+			</tr>
+			{{/each}}
+			<button class="button" id="add-product">Add a Product</button>
+		</tbody>
+	</table>
 
 </div>
