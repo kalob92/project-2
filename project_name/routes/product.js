@@ -5,6 +5,7 @@ const request = require('request');
 // Require controller modules
 var productController = require('../controllers/productcontroller');
 
+
 // home/login page
 router.get("/", function(req,res) {
 	res.render('login', {
@@ -14,7 +15,9 @@ router.get("/", function(req,res) {
 
 // forgot password?
 router.get('/forgot', function(req, res) {
-	res.render('forgot')
+	res.render('forgot', {
+		loggedIn: false
+	});
 });
 
 // Get request to get all products
@@ -35,18 +38,18 @@ router.get('/create', function(req, res) {
 
 // GET request for chat section
 router.get('/chat', function(req, res) {
-      res.render('chat', {
-        pageTitle: 'Chat',
-        pageID: 'chat'
-      });
+	res.render('chat', {
+	pageTitle: 'Chat',
+	pageID: 'chat'
 	});
+});
 	
-	// GET request for about section
+// GET request for about section
 router.get('/about', function(req, res) {
 	res.render('about', {
 		loggedIn: true
 	});
-  });
+});
 
 // GET request for edit one product
 router.get('/:id/edit', productController.edit);
@@ -68,14 +71,14 @@ router.get('/api/:id', function(req, response, next){
 		if (err) { 
 			return console.log(err);
 		}
-		console.log(body)
+		console.log(body);
 		var movieObj = body;
-		response.locals.movieObj = movieObj
+		response.locals.movieObj = movieObj;
 		next();
 	});
 
 }, function(req, res, next){
-	 movieTitle = JSON.parse(res.locals.movieObj)
+	 movieTitle = JSON.parse(res.locals.movieObj);
 	 res.render('info',{
 	 	movieTitle: movieTitle
 	 });
