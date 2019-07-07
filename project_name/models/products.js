@@ -1,30 +1,35 @@
-module.exports = function(sequelize, DataTypes){
+module.exports = function (sequelize, DataTypes) {
 	var Product = sequelize.define("product", {
 		name: {
 			type: DataTypes.STRING,
 			allowNull: false,
 			validate: {
-      			notEmpty: {
-        			msg: "Enter a product."
-      			}
+				notEmpty: {
+					msg: "Enter a product."
+				}
 			}
 		},
-		
+
 		department: {
 			type: DataTypes.STRING,
 			allowNull: false,
 			validate: {
-      			notEmpty: {
-        			msg: "Enter a product.."
-      			}
+				notEmpty: {
+					msg: "Enter a product.."
+				}
 			}
 		},
 		price: {
-			type: DataTypes.FLOAT(11,2),
+			type: DataTypes.FLOAT(11, 2),
 			defaultValue: 0.00,
 			validate: {
-      			min: 0
+				min: 0
 			}
+		},
+
+		description: {
+			type: DataTypes.STRING,
+			allowNull: false
 		},
 		stock: {
 			type: DataTypes.INTEGER,

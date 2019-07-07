@@ -5,15 +5,16 @@
 	<meta charset="UTF-8">
 
 	<title>Inventory</title>
+	<link rel="stylesheet" type="text/css" href="./styles/mybulma/sass/mystyles.css">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	{{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="./styles/mybulma/sass/mystyles.css">
 
 </head>
 
 <body>
+
 	{{!-- this navbar will only show up when the user is logged in --}}
 	<div class="conditional-navbar">
 		{{#if loggedIn}}
@@ -47,7 +48,6 @@
 		{{/if}}
 	</div>
 	{{!-- /div that holds conditional navbar --}}
-
 
 	{{{ body }}}
 	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>

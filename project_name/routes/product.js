@@ -28,6 +28,12 @@ router.get('/distributor', function(req, res) {
 	productController.list
 });
 
+
+router.get("/retailer", function(req,res){
+	res.render("retailer");
+})
+
+
 // GET request for insert a new product
 router.get('/create', function(req, res) {
 	res.render('create', {

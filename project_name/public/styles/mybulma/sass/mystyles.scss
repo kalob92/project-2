@@ -1,16 +1,13 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
+@import "./distributor.scss";
+@import "./list.scss";
+@import "./create.scss";
 
  
 $buttonColor: #7659EF;
 $userAndPassword-width: 500px;
 
-
-// .button {
-//     background-color: $buttonColor;
-//     border-color: transparent;
-//     color: #fff;
-// }
 
 #username-input {
     width: $userAndPassword-width;
