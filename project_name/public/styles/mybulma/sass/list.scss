@@ -1,5 +1,10 @@
+$buttonColor: #7659EF;
+
+
+
 #products-table {
-    margin: 30px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 #add-product {
@@ -11,4 +16,19 @@
 #products-available-text {
     text-align: center;
     font-size: 50px;
+}
+
+
+#deleteBtn {
+    background-color: red;
+    border-color: transparent;
+    color: #fff;
+    margin: 2px;
+}
+
+#editBtn {
+    background-color:$buttonColor;;
+    border-color: transparent;
+    color: #fff;
+    top: 2px;
 }
