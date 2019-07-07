@@ -6,7 +6,7 @@
 
 	<title>Inventory</title>
 	<link rel="stylesheet" type="text/css" href="./styles/mybulma/sass/mystyles.css">
-
+	<script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 	{{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
@@ -16,7 +16,7 @@
 <body>
 
 	{{!-- this navbar will only show up when the user is logged in --}}
-	{{!-- <div class="conditional-navbar">
+	<div class="conditional-navbar">
 		{{#if loggedIn}}
 		<nav class="navbar navbar-default navbar-light" style="background-color: rgb(13, 43, 63);">
 			<div class="container-fluid">
@@ -46,7 +46,7 @@
 			</div>
 		</nav>
 		{{/if}}
-	</div> --}}
+	</div>
 	{{!-- /div that holds conditional navbar --}}
 
 	{{{ body }}}

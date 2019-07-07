@@ -1,12 +1,12 @@
 #deleteBtn {
-  background-color: #7659EF;
+  background-color: red;
   border-color: transparent;
   color: #fff;
   margin: 2px;
 }
 
 #editBtn {
-  background-color: red;
+  background-color: #7659EF;
   border-color: transparent;
   color: #fff;
 }
