@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAIA,AAAA,UAAU,CAAC;EACP,gBAAgB,EAAE,GAAG;EACrB,YAAY,EAAE,WAAW;EACzB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,GAAG;CACd;;AAED,AAAA,QAAQ,CAAC;EACL,gBAAgB,EAZN,OAAO;EAajB,YAAY,EAAE,WAAW;EACzB,KAAK,EAAE,IAAI;CACd",
+    "mappings": "",
     "sources": [
         "distributor.scss"
     ],
