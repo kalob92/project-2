@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+@import "./distributor.scss";
+@import "./list.scss";
+@import "./create.scss";
+
+ 
+$buttonColor: #7659EF;
+$userAndPassword-width: 500px;
+
+
+#username-input {
+    width: $userAndPassword-width;
+    box-shadow: inset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#password-input {
+    width: $userAndPassword-width;
+    box-shadow: inset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#eye {
+    width: 90px;
+    box-shadow: inset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    margin-top: 90px;
+}
+
+#login {
+    width: $userAndPassword-width;
+    box-shadow: inset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $buttonColor;
+    border-color: transparent;
+    color: #fff;
+
+}
+
+#forgot-password {
+    box-shadow: inset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.no-account {
+    box-shadow: inset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

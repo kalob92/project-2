@@ -5,8 +5,20 @@ const request = require('request');
 // Require controller modules
 var productController = require('../controllers/productcontroller');
 
+
+router.get("/", function(req,res) {
+	res.render('login', {
+		loggedIn: false
+	});
+});
 // Get request to get all products
 router.get('/distributor', productController.list);
+
+
+router.get("/retailer", function(req,res){
+	res.render("retailer");
+})
+
 
 // GET request for insert a new product
 router.get('/create', productController.create);
