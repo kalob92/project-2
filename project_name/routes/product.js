@@ -21,13 +21,15 @@ router.get('/forgot', function(req, res) {
 });
 
 // Get request to get all products
-router.get('/distributor', function(req, res) {
-	res.render('list', {
-		loggedIn: true
-	}),
-	productController.list
-});
+// router.get('/distributor', function(req, res) {
+// 	res.render('list', {
+// 		loggedIn: true
+// 	}),
+// 	productController.list
+// });
 
+router.get('/distributor', productController.list);
+	
 
 router.get("/retailer", function(req,res){
 	res.render("retailer");
