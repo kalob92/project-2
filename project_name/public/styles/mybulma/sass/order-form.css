@@ -1,4 +1,16 @@
 #order-container {
   margin: 30px;
 }
+
+#orderBtn {
+  border-color: transparent;
+  color: #fff;
+  background-color: #7659EF;
+}
+
+#cancelOrderBtn {
+  border-color: transparent;
+  color: #fff;
+  background-color: red;
+}
 /*# sourceMappingURL=order-form.css.map */

@@ -1,6 +1,6 @@
 <div id="order-container">
 
-{{!-- <h1 id="available-products">Products Available</h1> --}}
+	{{!-- <h1 id="available-products">Products Available</h1> --}}
 
 
 	<table id="order-table" class="table is-hoverable">
@@ -10,8 +10,6 @@
 				<th>Type</th>
 				<th><abbr title="Price">Price</abbr></th>
 				<th><abbr title="Quantity">Quantity</abbr></th>
-				<th><abbr title="Description">Description</abbr></th>
-				<th><abbr title="Action">Action</abbr></th>
 			</tr>
 		</thead>
 
@@ -24,13 +22,14 @@
 				<td>{{this.stock}}</td>
 				<td>{{this.description}}</td>
 				<td><button class="button" title="Delete" id="deleteBtn"><i class="fas fa-trash-alt"></i></button>
-				<button class="button" title="Edit"id="editBtn"><i class="fas fa-edit"></i></button></td>
+					<button class="button" title="Edit" id="editBtn"><i class="fas fa-edit"></i></button></td>
 			</tr>
 			{{/each}}
 			{{!-- <button class="button" id="add-product">Add a Product</button> --}}
 		</tbody>
 	</table>
-				<button class="button" id="orderBtn">Order</button>
+	<button class="button" id="orderBtn">Order</button>
+	<button class="button" id="cancelOrderBtn">Cancel</button>
+
 
 </div>
-
