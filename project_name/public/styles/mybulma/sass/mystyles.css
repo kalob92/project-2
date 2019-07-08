@@ -11595,6 +11595,10 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 
+#product-container {
+  margin: 30px;
+}
+
 #products-table {
   width: 100%;
   margin-top: 10px;
