@@ -26,8 +26,6 @@ module.exports = function (app) {
         });
     });
 
-    // Gets the distributor page. Not workin
-    // *************************************
     app.get("/distributors", function (req, res) {
         db.Products.findAll({}).then(function(products) {
             console.log(products);
@@ -39,7 +37,6 @@ module.exports = function (app) {
             }); 
         });
   
-    // *************************************
 
 // Gets the order form page for the retailer
     app.get("/order", function (req, res) {

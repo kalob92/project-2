@@ -23,7 +23,7 @@ $("#login").on("click", function (event) {
     if (username == "retailer") {
         window.location.href = window.location.origin + "/retailer";
     } else if (username == "distributor") {
-        window.location.href = window.location.origin + "/distributor";
+        window.location.href = window.location.origin + "/distributors";
     }
     else {
         alert("Not a valid login!");
