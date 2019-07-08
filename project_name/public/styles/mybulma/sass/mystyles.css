@@ -11637,7 +11637,7 @@ label.panel-block:hover {
   color: #fff;
 }
 
-#username-input {
+#username-field {
   width: 500px;
   -webkit-box-shadow: inset;
           box-shadow: inset;
@@ -11646,7 +11646,7 @@ label.panel-block:hover {
   margin-right: auto;
 }
 
-#password-input {
+#password-field {
   width: 500px;
   -webkit-box-shadow: inset;
           box-shadow: inset;
