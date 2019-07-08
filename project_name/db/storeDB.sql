@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS `storedb`;
-CREATE DATABASE `storedb`;
-USE `storedb`;
+DROP DATABASE IF EXISTS storedb;
+CREATE DATABASE storedb;
+USE storedb;

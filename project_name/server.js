@@ -1,50 +1,52 @@
-
+// Dependencies
+// ======================================================
 const express = require("express");
+const exphbs = require("express-handlebars");
+
+// const product = require('./routes/product');
+// const path = require('path');
+
+
+// Express
+// ======================================================
 const app = express();
-const product = require('./routes/product');
-const path = require('path');
 const PORT = process.env.PORT || 3000;
 
 
-// Requiring our models for syncing
-const db = require("./models");
+// Requiring models for syncing
+// ======================================================
+let db = require("./models");
 
 // Sets up the Express app to handle data parsing
-const bodyParser = require("body-parser");
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Static Directory
+// =======================================================
 app.use(express.static("public"));
 
 
-// Handlebars
-const exphbs = require("express-handlebars");
-
 // Helper to format the price with 2 decimals
-const hbs = exphbs.create({
-	helpers: {
-		formatPrice: function(price) {
-  			price = price.toFixed(2);
-  			return price;
-  		}
-  	},
-  	defaultLayout: 'main'
-});
-app.engine('handlebars', hbs.engine);
+// const hbs = exphbs.create({
+// 	helpers: {
+// 		formatPrice: function(price) {
+//   			price = price.toFixed(2);
+//   			return price;
+//   		}
+//   	},
+//   	defaultLayout: 'main'
+// });
+
+// Handlebars
+// ======================================================
+app.engine('handlebars', exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
+// Routes
+// ======================================================
+// require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
 
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(path.join(__dirname, '/public')));
-
-// Router
-app.use('/', product);
-
-// Handle 404
-app.use(function(req, res) {
-	res.render('404');
-});
 
 db.sequelize.sync().then(function(){
 	app.listen(PORT, function() {
@@ -52,4 +54,3 @@ db.sequelize.sync().then(function(){
 	});
 });
 
-module.exports = app;
