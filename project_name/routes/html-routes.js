@@ -1,5 +1,6 @@
 let db = require("../models");
 let moment = require("moment");
+const express = require('express');
 
 // moment.js
 let today = moment().format("dddd, MMMM Do");
@@ -36,6 +37,13 @@ module.exports = function (app) {
             }); 
         });
   
+
+    app.get("/edit", function (req, res){
+            res.render("edit", {
+                loggedIn:true
+            });
+        })
+
 
 // Gets the order form page for the retailer
     app.get("/order", function (req, res) {

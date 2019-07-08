@@ -27,15 +27,15 @@ app.use(express.static("public"));
 
 
 // Helper to format the price with 2 decimals
-// const hbs = exphbs.create({
-// 	helpers: {
-// 		formatPrice: function(price) {
-//   			price = price.toFixed(2);
-//   			return price;
-//   		}
-//   	},
-//   	defaultLayout: 'main'
-// });
+const hbs = exphbs.create({
+	helpers: {
+		formatPrice: function(price) {
+  			price = price.toFixed(2);
+  			return price;
+  		}
+  	},
+  	defaultLayout: 'main'
+});
 
 // Handlebars
 // ======================================================

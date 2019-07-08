@@ -11622,7 +11622,7 @@ label.panel-block:hover {
   margin: 2px;
 }
 
-#editBtn {
+.Edit {
   background-color: #7659EF;
   border-color: transparent;
   color: #fff;

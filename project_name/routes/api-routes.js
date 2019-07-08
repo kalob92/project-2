@@ -35,12 +35,31 @@ module.exports = function(app) {
       res.end();
     })
   })
+
+
+
+  app.edit = function(req, res){
+	db.Product.findById(req.params.id)
+		.then(function(data){
+			if(data){
+				for (var i = 0 in departments) {
+					if(departments[i].value == data.department){
+				  		departments[i].selected = true;
+					} else {
+						departments[i].selected = false;
+					}
+				}
+				res.render("edit", { product: data, department: departments});
+			} else {
+				res.render('404');
+			} 
+	});
 }
 
 
 
 
-
+}
 
 
 
