@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" {{#if loggedIn}} class="has-navbar-fixed-top" {{/if}}>
 
 <head>
 	<meta charset="UTF-8">
@@ -49,11 +49,33 @@
 		{{/if}}
 	</div> --}}
 	{{!-- /div that holds conditional navbar --}}
-	
+
+
+	{{!-- conditional top navbar --}}
+	{{#if loggedIn}}
+	<section>
+		<nav class="navbar is-dark is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/">
+					<img src="/img/vision.png">
+				</a>
+
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				</a>
+			</div>
+		</nav>
+	</section>
+	{{/if}}
+	{{!-- /conditional top navbar --}}
+
+
 	{{!-- conditional side nav --}}
+	{{#if loggedIn}}
 	<section class="main-content columns is-fullheight">
-		{{#if loggedIn}}
-		<aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
+		<aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile is-unselectable">
 			{{!-- <p class="menu-label is-hidden-touch">Navigation</p>
 			<ul class="menu-list">
 				<li>
@@ -90,14 +112,14 @@
 			<ul class="menu-list">
 				<li><a><span class="icon"><i class="fas fa-shopping-basket"></i></span>New Order</a></li>
 				<li>
-					<a class="menu-label">Repeat Order</a>
+					<p class="menu-label"> - Repeat Order</p>
 					<ul>
 						<li><a><span class="icon is-small"><i class="fas fa-mouse-pointer"></i></span> Click & Go</a></li>
 						<li><a><span class="icon is-small"><i class="fas fa-edit"></i></span> View & Edit</a></li>
 					</ul>
 				</li>
 				<li><a><span class="icon"><i class="fas fa-history"></i></span>Order History</a></li>
-				<li><a><span class="icon"><i class="fas fa-search"></i></span>Search Distributors</a></li>
+				<li><a><span class="icon"><i class="far fa-eye"></i></span>Search Distributors</a></li>
 			</ul>
 			<p class="menu-label">
 				Account Options
