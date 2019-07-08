@@ -9,7 +9,7 @@ $buttonColor: #7659EF;
 $userAndPassword-width: 500px;
 
 
-#username-input {
+#username-field {
     width: $userAndPassword-width;
     box-shadow: inset;
     display: block;
@@ -17,7 +17,7 @@ $userAndPassword-width: 500px;
     margin-right: auto;
 }
 
-#password-input {
+#password-field {
     width: $userAndPassword-width;
     box-shadow: inset;
     display: block;
