@@ -95,6 +95,7 @@ $(document).ready(function() {
     // Add class "has-error to the element's parent"
     el.parent().addClass("has-error");
   }
+  
 });
 
 $(".icon_edit").tooltip();

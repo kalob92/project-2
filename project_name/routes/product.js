@@ -1,10 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const request = require('request');
+var moment = require("moment");
+
+// moment.js
+var today = moment().format("dddd, MMMM Do");
+var quarter = moment().format("Qo");
+var week = moment().format("w");
 
 // Require controller modules
 var productController = require('../controllers/productcontroller');
-
 
 // home/login page
 router.get("/", function(req,res) {
@@ -29,11 +34,16 @@ router.get('/forgot', function(req, res) {
 // });
 
 router.get('/distributor', productController.list);
-	
 
 router.get("/retailer", function(req,res){
-	res.render("retailer");
-})
+	res.render("retailer", {
+		loggedIn: true,
+		retailUserName: "Local Liquor Hut",
+		today: today,
+		quarter: quarter,
+		week: week
+	});
+});
 
 
 // GET request for insert a new product
