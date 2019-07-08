@@ -14,42 +14,6 @@
 </head>
 
 <body>
-
-	{{!-- this navbar will only show up when the user is logged in --}}
-	{{!-- <div class="conditional-navbar">
-		{{#if loggedIn}}
-		<nav class="navbar navbar-default navbar-light" style="background-color: rgb(13, 43, 63);">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">
-						<img src="./img/vision.png" id="eye">
-					</a>
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-						data-target="#navbar-collapse" aria-expanded="false">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div> --}}
-	<!-- Collect the nav links -->
-	{{!-- <div class="collapse navbar-collapse" id="navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="/create">Create</a></li>
-						<li><a href="/">List</a></li>
-						<li><a href="https://guarded-beach-71836.herokuapp.com/"
-								onclick="return popUp('https://guarded-beach-71836.herokuapp.com/')">Chat</a></li>
-						<li><a href="/about">About</a></li>
-
-					</ul>
-
-				</div> --}}
-	{{!-- </div>
-		</nav>
-		{{/if}}
-	</div> --}}
-	{{!-- /div that holds conditional navbar --}}
-
-
 	{{!-- conditional top navbar --}}
 	{{#if loggedIn}}
 	<section>
@@ -67,41 +31,10 @@
 	{{/if}}
 	{{!-- /conditional top navbar --}}
 
-
 	{{!-- conditional side nav --}}
 	{{#if loggedIn}}
 	<section class="main-content columns is-fullheight">
 		<aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile is-unselectable has-background-light">
-			{{!-- <p class="menu-label is-hidden-touch">Navigation</p>
-			<ul class="menu-list">
-				<li>
-					<a href="#" class="">
-						<span class="icon"><i class="fa fa-home"></i></span> Home
-					</a>
-				</li>
-				<li>
-					<a href="#" class="is-active">
-						<span class="icon"><i class="fa fa-table"></i></span> Links
-					</a>
-					<ul>
-						<li>
-							<a href="#">
-								<span class="icon is-small"><i class="fa fa-link"></i></span> Link1
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="icon is-small"><i class="fa fa-link"></i></span> Link2
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#" class="">
-						<span class="icon"><i class="fa fa-info"></i></span> About
-					</a>
-				</li>
-			</ul> --}}
 			<p class="menu-label">
 				Control Panel
 			</p>
@@ -110,12 +43,13 @@
 				<li>
 					<p class="menu-label"> - Repeat Order</p>
 					<ul>
-						<li><a><span class="icon is-small"><i class="fas fa-mouse-pointer"></i></span> Click & Go</a></li>
-						<li><a><span class="icon is-small"><i class="fas fa-edit"></i></span> View & Edit</a></li>
+						<li><a><span class="icon is-small"><i class="fas fa-mouse-pointer fa-sm"></i></span> Click & Go</a></li>
+						<li><a><span class="icon is-small"><i class="fas fa-edit fa-sm"></i></span> View & Edit</a></li>
 					</ul>
 				</li>
 				<li><a><span class="icon"><i class="fas fa-history"></i></span>Order History</a></li>
-				<li><a><span class="icon"><i class="far fa-eye"></i></span>Search Distributors</a></li>
+				<li><a><span class="icon"><i class="fas fa-binoculars"></i></span>Search Distributors</a></li>
+				<li><a href="https://guarded-beach-71836.herokuapp.com/" onclick="return popUp('https://guarded-beach-71836.herokuapp.com/')"><span class="icon"><i class="fas fa-comments-dollar"></i></span>Chat</a></li>
 			</ul>
 			<p class="menu-label">
 				Account Options
@@ -127,34 +61,6 @@
 				<li><a><span class="icon"><i class="fas fa-sign-out-alt"></i></span>Log Out</a></li>
 			</ul>
 		</aside>
-		{{!-- <div class="conditional-sidebar navbar">
-			<aside class="menu">
-				<p class="menu-label">
-					Control Panel
-				</p>
-				<ul class="menu-list">
-				<li><a>New Order</a></li>
-				<li>
-					<a class="is-active">Repeat Order</a>
-					<ul>
-						<li><a>Click and Go</a></li>
-						<li><a>Revise and Edit</a></li>
-					</ul>
-				</li>
-				<li><a>Order History</a></li>
-				<li><a>Search Distributors</a></li>
-				</ul>
-				<p class="menu-label">
-					Account Options
-				</p>
-				<ul class="menu-list">
-					<li><a>Payments</a></li>
-					<li><a>Addresses</a></li>
-					<li><a>Passwords, Preferences, & More</a></li>
-					<li><a>Log Out</a></li>
-				</ul>
-			</aside>
-		</div> --}}
 		{{/if}}
 		{{!-- /side nav --}}
 
