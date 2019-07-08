@@ -8,7 +8,7 @@ $("#add-product").on("click", function(event){
         stock: $("#quantity-available").val().trim()
       }
       $.post("/api/products", newProduct).then(function(response){
-          location.href = "/discributors";
+          location.href = "/distributors";
       })
 })
 
