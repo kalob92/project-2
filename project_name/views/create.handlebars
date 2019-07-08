@@ -1,62 +1,78 @@
 <div id="product-form">
-<form class="form-horizontal" >
-<fieldset>
+  <form class="form-horizontal">
+    <fieldset>
 
-<!-- Text input-->
-<div class="field">
-  <label class="label" for="product-name">Product Name</label>
-  <div class="control">
-    <input id="product-name" name="product-name" type="text" placeholder="product name" class="input " required="">
-    
-  </div>
-</div>
+      <!-- Text input-->
+      <div class="field">
+        <label class="label" for="product-name">Product Name</label>
+        <div class="control">
+          <input id="product-name" name="product-name" type="text" placeholder="product name" class="input "
+            required="">
 
-<!-- Text input-->
-<div class="field">
-  <label class="label" for="quantity-available">Quantity Available</label>
-  <div class="control">
-    <input id="quantity-available" name="quantity-available" type="text" placeholder="quantity available" class="input " required="">
-    
-  </div>
-</div>
+        </div>
+      </div>
 
-<div class="field">
-  <label class="label" for="quantity-available">Price</label>
-  <div class="control">
-    <input id="price" name="price" type="text" placeholder="0.00" class="input " required="">
-    
-  </div>
-</div>
+      <!-- Text input-->
+      <div class="field">
+        <label class="label" for="quantity-available">Quantity Available</label>
+        <div class="control">
+          <input id="quantity-available" name="quantity-available" type="text" placeholder="quantity available"
+            class="input " required="">
 
-<!-- Select Basic -->
-<div class="field">
-  <label class="label" for="select">Select Category</label>
-  <div class="control">
-  	<div class="select">
-	    <select id="select" name="select" class="">
-	      <option>Option one</option>
-	      <option>Option two</option>
-	    </select>
-	</div>
-  </div>
-</div>
+        </div>
+      </div>
 
-<!-- Textarea -->
-<div class="field">
-  <label class="label" for="product-description">Product Description </label>
-  <div class="control">                     
-    <textarea class="textarea" id="product-description" name="product-description" placeholder="description"></textarea>
-  </div>
-</div>
+      <div class="field">
+        <label class="label" for="quantity-available">Price</label>
+        <div class="control">
+          <input id="price" name="price" type="text" placeholder="0.00" class="input " required="">
 
-<!-- Button (Double) -->
-<div class="field">
-  <label class="label" for="submitBtn"></label>
-  <div class="control">
-    <button id="submitBtn" name="submitBtn" class="button is-default">Submit</button>
-    <button id="cancelBtn" name="cancelBtn" class="button is-danger">Cancel</button>
-  </div>
-</div>
+        </div>
+      </div>
 
-</fieldset>
-</form>
+      <!-- Select Basic -->
+      <div class="field">
+        <label class="label" for="select">Select Category</label>
+        <div class="control">
+          <div class="select">
+            <select id="select" name="select" class="">
+              <option >Select Catagory</option>
+              <option value="beer">Beer</option>
+              <option value="vodka">Vodka</option>
+              <option value="rum">Rum</option>
+              <option value="whiskey">Whiskey</option>
+              <option value="gin">Gin</option>
+              <option value="tequila">Tequila</option>
+              <option value="wine">Wine</option>
+              <option value="other">Other</option>
+
+
+
+
+
+
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Textarea -->
+      <div class="field">
+        <label class="label" for="product-description">Product Description </label>
+        <div class="control">
+          <textarea class="textarea" id="product-description" name="product-description"
+            placeholder="description"></textarea>
+        </div>
+      </div>
+
+      <!-- Button (Double) -->
+      <div class="field">
+        <label class="label" for="submitBtn"></label>
+        <div class="control">
+          <button id="submitBtn" name="submitBtn" class="button is-default">Add Product</button>
+          <button id="cancelBtn" name="cancelBtn" class="button is-danger">Cancel</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
