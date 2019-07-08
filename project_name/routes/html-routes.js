@@ -29,11 +29,13 @@ module.exports = function (app) {
     // Gets the distributor page. Not workin
     // *************************************
     app.get("/distributors", function (req, res) {
-        // db.Product.findAll({}).then(function (product) {
-        //     console.log(product);
-            res.render("list");
+        db.Product.findAll({}).then(function(product) {
+            console.log(product);
+            res.render("list" , product) //{
+                // loggedIn: true
+            // });
         });
-    // });
+    });
     // *************************************
 
 // Gets the order form page for the retailer

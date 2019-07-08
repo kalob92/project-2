@@ -11628,13 +11628,17 @@ label.panel-block:hover {
 #product-form {
   margin-top: 50px;
   margin-left: 100px;
-  margin-right: 100px;
+  width: 50%;
 }
 
 #submitBtn {
   background-color: #7659EF;
   border-color: transparent;
   color: #fff;
+}
+
+#order-container {
+  margin: 30px;
 }
 
 #username-field {
