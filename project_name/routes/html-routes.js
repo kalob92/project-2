@@ -28,7 +28,6 @@ module.exports = function (app) {
 
     app.get("/distributors", function (req, res) {
         db.Products.findAll({}).then(function(products) {
-            console.log(products);
             res.render("list" , {
                 loggedIn: true,
                 products

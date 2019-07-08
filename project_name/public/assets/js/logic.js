@@ -32,3 +32,20 @@ $("#login").on("click", function (event) {
 });
 
 
+$("#deleteBtn").on("click", function(){
+
+    // 
+
+    // modal here for confirming delete
+    
+    let id = $(this).parents("tr").data("id");
+
+    $.ajax({
+        method: "DELETE",
+        url: `/api/products/${id}`
+    }).then(function(response){
+        location.reload();
+    })
+})
+
+

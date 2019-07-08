@@ -11645,6 +11645,18 @@ label.panel-block:hover {
   margin: 30px;
 }
 
+#orderBtn {
+  border-color: transparent;
+  color: #fff;
+  background-color: #7659EF;
+}
+
+#cancelOrderBtn {
+  border-color: transparent;
+  color: #fff;
+  background-color: red;
+}
+
 #username-field {
   width: 500px;
   -webkit-box-shadow: inset;
