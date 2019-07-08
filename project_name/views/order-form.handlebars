@@ -1,20 +1,20 @@
-<h1 id="products-available-text">Products Available</h1>
+<h1 id="available-products">Products Available</h1>
 
 
-	<table id="products-table" class="table is-hoverable">
+	<table id="order-table" class="table is-hoverable">
 		<thead>
 			<tr>
-				<th><abbr title="Position">Product</abbr></th>
+				<th><abbr title="Product">Product's Available</abbr></th>
 				<th>Type</th>
 				<th><abbr title="Price">Price</abbr></th>
-				<th><abbr title="Stock">Stock</abbr></th>
+				<th><abbr title="Quantity">Quantity</abbr></th>
 				<th><abbr title="Description">Description</abbr></th>
 				<th><abbr title="Action">Action</abbr></th>
 			</tr>
 		</thead>
 
 		<tbody>
-			{{#each product}}
+			{{#each products}}
 			<tr>
 				<td>{{this.name}}</td>
 				<td>{{this.department}}</td>
