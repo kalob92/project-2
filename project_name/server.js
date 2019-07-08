@@ -46,6 +46,7 @@ app.set("view engine", "handlebars");
 // ======================================================
 // require("./routes/api-routes")(app);
 require("./routes/html-routes")(app);
+require("./routes/api-routes")(app);
 
 
 db.sequelize.sync().then(function(){
