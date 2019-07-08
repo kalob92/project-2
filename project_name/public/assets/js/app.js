@@ -1,12 +1,12 @@
 $(document).ready(function() {
   // datatable config
-  $("table").DataTable({
-    columnDefs: [{ orderable: false, targets: [5] }],
-    order: [[0, "asc"]],
-    info: false,
-    paging: true,
-    pagingType: "full_numbers"
-  });
+  // $("table").DataTable({
+  //   columnDefs: [{ orderable: false, targets: [5] }],
+  //   order: [[0, "asc"]],
+  //   info: false,
+  //   paging: true,
+  //   pagingType: "full_numbers"
+  // });
 
   // Validate the form before submit it
   $("#submit").on("click", function(e) {

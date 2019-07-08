@@ -26,9 +26,14 @@ router.get('/forgot', function(req, res) {
 });
 
 // Get request to get all products
-router.get('/distributor', 	productController.list);
+// router.get('/distributor', function(req, res) {
+// 	res.render('list', {
+// 		loggedIn: true
+// 	}),
+// 	productController.list
+// });
 
-// router.get('/distributor', productController.list);
+router.get('/distributor', productController.list);
 
 router.get("/retailer", function(req,res){
 	res.render("retailer", {
@@ -58,11 +63,11 @@ router.get('/chat', function(req, res) {
 });
 	
 // GET request for about section
-router.get('/about', function(req, res) {
-	res.render('about', {
-		loggedIn: true
-	});
-});
+// router.get('/about', function(req, res) {
+// 	res.render('about', {
+// 		loggedIn: true
+// 	});
+// });
 
 // GET request for edit one product
 router.get('/:id/edit', productController.edit);
@@ -76,27 +81,5 @@ router.post('/update', productController.update);
 // POST request to delete a product
 router.post('/:id/delete', productController.delete);
 
-
-router.get('/api/:id', function(req, response, next){
-	var movie = req.params.id;
-
-	request('https://www.omdbapi.com/?t=' + movie + '&y=&plot=short&apikey=trilogy',{JSON: true},(err, res, body) => {
-		if (err) { 
-			return console.log(err);
-		}
-		console.log(body);
-		var movieObj = body;
-		response.locals.movieObj = movieObj;
-		next();
-	});
-
-}, function(req, res, next){
-	 movieTitle = JSON.parse(res.locals.movieObj);
-	 res.render('info',{
-	 	movieTitle: movieTitle
-	 });
-
-
-});
 
 module.exports = router;
