@@ -32,10 +32,10 @@ module.exports = function (app) {
         db.Products.findAll({}).then(function(products) {
             console.log(products);
             res.render("list" , {
-                loggedIn: true
-                
+                loggedIn: true,
+                products
             })
-            products
+        
             }); 
         });
   
