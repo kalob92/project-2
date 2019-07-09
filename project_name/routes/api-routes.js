@@ -1,6 +1,5 @@
 var db = require("../models");
 
-// // eslint-disable-next-line prettier/prettier
 module.exports = function(app) {
  
   app.get("/api/products", function(req,res){

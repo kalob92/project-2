@@ -3,10 +3,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 
-// const product = require('./routes/product');
-// const path = require('path');
-
-
 // Express
 // ======================================================
 const app = express();
@@ -25,17 +21,6 @@ app.use(express.json());
 // =======================================================
 app.use(express.static("public"));
 
-
-// Helper to format the price with 2 decimals
-// const hbs = exphbs.create({
-// 	helpers: {
-// 		formatPrice: function(price) {
-//   			price = price.toFixed(2);
-//   			return price;
-//   		}
-//   	},
-//   	defaultLayout: 'main'
-// });
 
 // Handlebars
 // ======================================================
