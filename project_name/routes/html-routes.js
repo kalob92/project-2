@@ -38,11 +38,17 @@ module.exports = function (app) {
         });
   
 
-    app.get("/edit", function (req, res){
-            res.render("edit", {
+    // app.post('/update', function (req, res){
+    //         res.render('list', {
+    //             loggedIn:true
+    //         });
+    //     })
+        app.get("/edit", function (req, res){
+            res.render("create", {
                 loggedIn:true
             });
         })
+
 
 
 // Gets the order form page for the retailer
@@ -57,6 +63,42 @@ module.exports = function (app) {
             loggedIn: true
         })
     })
+
+    app.edit = function(req, res){
+        db.Product.findById(req.params.id)
+            .then(function(data){
+                if(data){
+                    for (var i = 0 in departments) {
+                        if(departments[i].value == data.department){
+                              departments[i].selected = true;
+                        } else {
+                            departments[i].selected = false;
+                        }
+                    }
+                    res.render("edit", { product: data, department: departments});
+                } else {
+                    res.render('404');
+                } 
+        });
+    }
+    
+    // app.update = function(req, res){
+    //     console.log(req.body.active);
+    //     db.Product.update({
+    //         name: req.body.name,
+    //         department: req.body.department,
+    //         price: req.body.price ? parseFloat(req.body.price) : 0.00,
+    //         stock: req.body.stock ? parseInt(req.body.stock) : 0,
+    //         active: (req.body.active == 'on') ? true : false
+    //     }, {where: {
+    //         id: req.body.id
+    //     }})
+    //     .then(function(){
+    //         res.redirect('/distributors');
+    //     });
+        
+    // }
+    
 
 };
 
