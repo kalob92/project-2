@@ -1,5 +1,6 @@
 
 $("#submitBtn").on("click", function(event){
+   
     event.preventDefault();
     let newProduct = {
         name: $("#product-name").val().trim(),
@@ -8,8 +9,10 @@ $("#submitBtn").on("click", function(event){
         description: $("#product-description").val().trim(),
         stock: $("#quantity-available").val().trim(),
       }
+      
       $.post("/api/products", newProduct).then(function(response){
-          location.href = "/distributors";
+        console.log(newProduct);
+        location.href="/distributors";
       })
 })
 
@@ -104,7 +107,7 @@ $("#login").on("click", function (event) {
 
 });
 
-$("#deleteBtn").on("click", function(){
+$(".deleteBtn").on("click", function(){
     // 
 
     // modal here for confirming delete
