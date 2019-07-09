@@ -10,7 +10,7 @@ module.exports = function(app) {
   })
 
   app.post("/api/products", function(req,res){
-    let { name , department, price, description, stock, active} =req.body; //object destructurint
+    let { name , department, price, description, stock, active} =req.body; //object destructuring
 
     let newProduct = {
       name, 
