@@ -1,6 +1,6 @@
 <div id="product-container">
 
-<h1 id="products-available-text">Products Available</h1>
+	<h1 id="products-available-text">Products Available</h1>
 
 
 	<table id="products-table" class="table is-hoverable">
@@ -23,15 +23,14 @@
 				<td>{{this.price}}</td>
 				<td>{{this.stock}}</td>
 				<td>{{this.description}}</td>
-				<td><button class="button" title="Delete" id="deleteBtn"><i class="fas fa-trash-alt"></i></button>
-				<a href="/edit"><button class="button Edit"  title="Edit"><i class="fas fa-edit"></i></button></a></td>
+				<td><button class="button deleteBtn" title="Delete" ><i class="fas fa-trash-alt"></i></button></td>
+				<td>
+					<a href="/edit"><button class="button Edit"  title="Edit"><i class="fas fa-edit"></i></button></a></td>
 			</tr>
 			{{/each}}
-			{{!-- <button class="button" id="add-product">Add a Product</button> --}}
 		</tbody>
 	</table>
-				<button class="button" id="add-product">Add a Product</button>
-
-
-{{!-- id="editBtn" --}}
+				<a href="/create"><button class="button" id="add-product">Add a Product</button></a>
 </div>
+
+	

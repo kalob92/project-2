@@ -1,4 +1,6 @@
-$("#add-product").on("click", function(event){
+
+$("#submitBtn").on("click", function(event){
+   
     event.preventDefault();
     let newProduct = {
         name: $("#product-name").val().trim(),
@@ -7,10 +9,18 @@ $("#add-product").on("click", function(event){
         description: $("#product-description").val().trim(),
         stock: $("#quantity-available").val().trim(),
       }
+      
       $.post("/api/products", newProduct).then(function(response){
-          location.href = "/distributors";
+        console.log(newProduct);
+        location.href="/distributors";
       })
 })
+
+$("#add-product").click(function(e){
+    window.location.href ="localhost:3000/create";
+    
+});
+
 
 $('#submit').on('click', function(e){
     e.preventDefault();
@@ -95,10 +105,9 @@ $("#login").on("click", function (event) {
         location.reload();
     }
 
+});
 
-
-$("#deleteBtn").on("click", function(){
-
+$(".deleteBtn").on("click", function(){
     // 
 
     // modal here for confirming delete
@@ -112,6 +121,3 @@ $("#deleteBtn").on("click", function(){
         location.reload();
     })
 })
-});
-
-

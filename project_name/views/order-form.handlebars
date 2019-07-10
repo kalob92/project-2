@@ -6,7 +6,7 @@
 	<table id="order-table" class="table is-hoverable">
 		<thead>
 			<tr>
-				<th><abbr title="Product">Product's Available</abbr></th>
+				<th><abbr title="Product">Product Available</abbr></th>
 				<th>Type</th>
 				<th><abbr title="Price">Price</abbr></th>
 				<th><abbr title="Quantity">Quantity</abbr></th>
@@ -21,8 +21,7 @@
 				<td>{{this.price}}</td>
 				<td>{{this.stock}}</td>
 				<td>{{this.description}}</td>
-				<td><button class="button" title="Delete" id="deleteBtn"><i class="fas fa-trash-alt"></i></button>
-					<button class="button Edit" href="{{this.id}}/edit" title="Edit" ><i class="fas fa-edit"></i></button></td>
+				
 			</tr>
 			{{/each}}
 			{{!-- <button class="button" id="add-product">Add a Product</button> --}}
